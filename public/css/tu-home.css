@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../img/background_tu.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+nav {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px; /* Schaltflächen um 20px nach links schieben */
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav li:first-child {
+    margin-left: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #444;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    background-color: #b09ec06b;
+    border-radius: 5px;
+    padding: 20px;
+    width: 60%;
+    margin: 10px;
+}
+
+.box-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black; /* Hinzufügen einer Trennlinie */
+}
+
+.box-header img {
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.box-header h2 {
+    margin-top: 10px;
+}
+
+.box-content {
+    margin-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #b09ec04d;
+    border-radius: 5px;
+    padding: 20px;
+    width: 93%;
+    margin: 10px;
+}
+
+.box-content p {
+    margin: 0;
+}
+
+.box-content:hover {
+    margin-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #645e6962;
+    border-radius: 6px;
+    padding: 20px;
+    width: 93%;
+    margin: 10px;
+}
+
+/* Container für die vier Karten */
+.stat-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Einzelne Karten */
+.stat-card {
+    width: calc(25% - 20px); /* Platz für vier Karten gleichmäßig aufteilen */
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+    text-align: center;
+}
+
+/* Icon */
+.stat-icon {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+}
+
+/* Titel */
+.stat-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Beschreibung */
+.stat-description {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

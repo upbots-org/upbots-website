@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Embed Builder</title>
+        <link rel="stylesheet" type="text/css" href="/css/embed-builder.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="/img/upbots-logo.png" alt="upbots.org" />
+                <h1>upbots.org</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Donate</a></li>
+                    <!-- Neu -->
+                </ul>
+            </nav>
+        </header>
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <!-- Success Popup-Box -->
+        <% if (typeof success !== 'undefined') { %>
+        <!-- Success Popup-Box -->
+        <div class="popup success">
+            <p>Das Embed wurde erfolgreich gesendet!</p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+        <!-- 3 Sekunden Timeout, bevor die Weiterleitung erfolgt -->
+        <script>
+            setTimeout(function () {
+                window.location.href = '/embed-builder';
+            }, 3000);
+        </script>
+        <% } else if (typeof error !== 'undefined') { %>
+        <!-- Error Popup-Box -->
+        <div class="popup error">
+            <p>Es ist ein Fehler aufgetreten. Bitte überprüfe deine Eingabe.</p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+        <% } %>
+
+        <form method="POST" action="/submit">
+            <label for="webhookUrl">Webhook-URL:</label>
+            <input type="text" id="webhookUrl" name="webhookUrl" required />
+
+            <label for="webhookName">Webhook-Name:</label>
+            <input type="text" id="webhookName" name="webhookName" maxlength="80" />
+
+            <label for="webhookAvatar">Webhook-Avatar (https://imgur.com/):</label>
+            <input type="text" id="webhookAvatar" name="webhookAvatar" />
+
+            <hr />
+            <br />
+            <label for="author">Embed Autor Text:</label>
+            <input type="text" id="author" name="author" maxlength="256" />
+
+            <br />
+
+            <label for="title">Embed Titel:</label>
+            <input type="text" id="title" name="title" maxlength="256" />
+
+            <br />
+
+            <label for="description">Embed Beschreibung:</label>
+            <textarea id="description" name="description" rows="4" cols="50" maxlength="4096" required></textarea>
+
+            <br />
+
+            <label for="footer">Embed Fusszeilen Text:</label>
+            <input type="text" id="footer" name="footer" maxlength="2048" />
+
+            <br />
+
+            <label for="color">Embed Farbe:</label>
+            <input type="color" id="color" name="color" value="#ffffff" />
+
+            <br />
+            <br />
+
+            <input type="submit" value="Senden" />
+        </form>
+    </body>
+</html>
+
+<script>
+    function closePopup() {
+        var popup = document.querySelector('.popup');
+        popup.style.display = 'none';
+    }
+</script>
