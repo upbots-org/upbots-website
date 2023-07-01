@@ -20,9 +20,7 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', req.headers.origin);
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
     next();
-});
-
-app.set('view engine', 'ejs');
+}
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
